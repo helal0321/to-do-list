@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main_color:#1e88e5;
+    --border_color:#9e9e9e
+}
+body{
+    height: 100vh;
+    background-image: -webkit-linear-gradient(top,#4dd0e1 40%,#03a9f4,#1976d2);
+    
+}
+
+
+
+.to_do{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+}
+
+.to_do .ad_task{
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.to_do .ad_task input{
+    border: navajowhite;
+    border-bottom: 1px solid var(--border_color);
+    padding: 0 0 5px 0px;
+    width: 80%;
+}
+.to_do .ad_task input:focus{
+    outline: none;
+}
+.to_do .ad_task .sub {
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: var(--main_color);
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 20px;
+    width: 85px;
+}
+.ad_task span{
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 20px;
+    display: none;
+}
+
+.show_clear{
+    display: block !important;
+}
+.task_lists{
+    background-color: white;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 610px;
+    overflow-y: auto;
+}
+.task_lists::-webkit-scrollbar{
+    background-color: transparent;
+    width: 9px;
+}
+.task_lists::-webkit-scrollbar-thumb{
+    background-color: var(--main_color);
+    border-radius: 10px;
+}
+.task_lists h1{
+    margin-bottom: 20px
+}
+.task_lists .task{
+    display: flex;
+    border-bottom: 1px solid var(--border_color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task_lists .task .check{
+    border: 1px solid var(--border_color);
+    border-radius: 3px;
+    margin-right: 15px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+i{
+    cursor: pointer;
+}
+.task_lists .task .check i{
+display: none;
+}
+
+.task_lists .done .check i{
+    display: block;
+}
+.task_lists .done p{
+    text-decoration: line-through;
+    color: #9e9e9e;
+    
+}
+.task_lists .done .edit{
+    display: none;
+}
+.task_lists .edit_mod .check{
+    display: none;
+}
+.task_lists .edit_mod .content{
+    display: none;
+}
+
+.task_lists .task p{
+    font-size: 20px;
+    transition: .3s;
+}
+
+.task_lists .task .icons{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+
+}
+.task_lists .edit_mod form{
+    width: 100%;
+    display: flex;
+}
+.task_lists .edit_mod .icons{
+    display: none;
+}
+.task_lists .edit_mod input:not(:last-child){
+    width: 100%;
+    border: 1px solid var(--border_color);
+    padding: 5px;
+}
+.task_lists .edit_mod input:focus{
+    outline: none;
+}
+.task_lists .edit_mod input:last-child{
+background-color: var(--main_color);
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 95px;
+    font-size: 16px;
+}
+.task_lists .task .icons i{
+
+}
+.task_lists .task .icons .edit{
+    background-color: var(--main_color);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+.task_lists .task .icons .delete{
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
